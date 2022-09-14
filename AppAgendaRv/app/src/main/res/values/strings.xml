@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppAgendaRv</string>
+    <string name="nombre">Ingrese nombre</string>
+    <string name="cel">Ingrese Cel.</string>
 </resources>
