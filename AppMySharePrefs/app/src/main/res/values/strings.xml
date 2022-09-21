@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppMySharePrefs</string>
+    <string name="usuario">Ingrese usuario</string>
+    <string name="guardar">guardar info</string>
+    <string name="cargar">cargar info grabada</string>
+</resources>
