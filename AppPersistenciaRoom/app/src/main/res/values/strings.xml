@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppPersistenciaRoom</string>
+    <string name="nombre">Ingrese Nombre</string>
+    <string name="cel">Ingrese Cel.</string>
+</resources>
