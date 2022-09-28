@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class ContactAdapter(val contacts: List<User>): RecyclerView.Adapter<ContactPrototype>() {
+class ContactAdapter(val contacts: List<User>, val itemClickListener: OnItemClickListener): RecyclerView.Adapter<ContactPrototype>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactPrototype {
         val view = LayoutInflater
             .from(parent.context)
@@ -17,7 +17,7 @@ class ContactAdapter(val contacts: List<User>): RecyclerView.Adapter<ContactProt
     }
 
     override fun onBindViewHolder(holder: ContactPrototype, position: Int) {
-        holder.bind(contacts.get(position))
+        holder.bind(contacts.get(position), itemClickListener)
     }
 
     override fun getItemCount(): Int {
@@ -30,8 +30,30 @@ class ContactPrototype(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val tvTelephone = itemView.findViewById<TextView>(R.id.tvTelephone)
     val cvContact = itemView.findViewById<CardView>(R.id.cvContact)
 
-    fun bind(contact: User){
+    fun bind(contact: User, itemClikListener: OnItemClickListener){
         tvName.text = contact.name
         tvTelephone.text = contact.telephone
+
+        cvContact.setOnClickListener {
+            itemClikListener.OnItemClicked(contact)
+        }
     }
 }
+
+interface OnItemClickListener{
+    fun OnItemClicked(contact: User)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

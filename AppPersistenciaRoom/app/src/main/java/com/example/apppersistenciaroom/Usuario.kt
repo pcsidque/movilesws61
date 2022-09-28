@@ -10,8 +10,8 @@ data class User (
     val id: Int?,
 
     @ColumnInfo
-    val name: String,
+    var name: String,
 
     @ColumnInfo
-    val telephone: String
+    var telephone: String
     )

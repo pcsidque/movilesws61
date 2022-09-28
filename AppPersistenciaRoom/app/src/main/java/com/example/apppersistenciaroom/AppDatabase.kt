@@ -16,7 +16,7 @@ abstract class AppDatabase : RoomDatabase() {
             //Aqui pregunto si la BD no existe
             if (INSTANCE == null){ //Aqui solo entrara la 1ra vez
                 INSTANCE = Room
-                    .databaseBuilder(context, AppDatabase::class.java, "myuser.db")
+                    .databaseBuilder(context, AppDatabase::class.java, "myuser2.db")
                     .allowMainThreadQueries()
                     .build()
             }
